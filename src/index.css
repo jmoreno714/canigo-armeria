@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 40 10% 90%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 40 10% 90%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 10% 90%;
+
+    --primary: 43 72% 52%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 10% 85%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 55%;
+
+    --accent: 90 25% 30%;
+    --accent-foreground: 90 30% 85%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 43 72% 52%;
+
+    --radius: 0.5rem;
+
+    --gold: 43 72% 52%;
+    --gold-light: 43 60% 65%;
+    --olive: 90 25% 30%;
+    --anthracite: 0 0% 12%;
+    --gunmetal: 210 5% 20%;
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 40 10% 90%;
+    --sidebar-primary: 43 72% 52%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 40 10% 90%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 43 72% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .bg-anthracite {
+    background-color: hsl(var(--anthracite));
+  }
+  .bg-gunmetal {
+    background-color: hsl(var(--gunmetal));
+  }
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+  }
+  .gradient-dark {
+    background: linear-gradient(180deg, hsl(0 0% 7%), hsl(0 0% 4%));
+  }
+}
